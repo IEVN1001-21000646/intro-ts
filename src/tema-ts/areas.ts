@@ -1,51 +1,40 @@
-class Figuras{
-    protected alturaRec:number;
+
+
+export class Figuras{
+    protected baseRec:number;
     protected Lado:number;
     protected radio:number;
-    
-
-    constructor (alturaRec:number,Lado:number,radio:number){
-        this.alturaRec=alturaRec;
+ 
+    constructor (baseRec:number,Lado:number,radio:number){
+        this.baseRec=baseRec;
         this.Lado=Lado;
         this.radio=radio;
-        
     }
 
     public rectangulo(){
-
-        console.log(`el area del rectangulo es ${this.alturaRec * this.Lado}`)
-        
-
-        
+        //this.areaRect = 
+        return this.Lado * this.baseRec;
+               
     }
-
+    
     public cuadrado(){
-        
-        console.log(`el area del cuadrado es ${this.Lado * this.Lado}`)
+       
+        return this.Lado * this.Lado;
         
     }
 
     public circulo(){
-
-        console.log(`el area del circulo es ${Math.PI * Math.pow(2,this.radio)}`)
-        
-        Math.PI * Math.pow(2,this.radio);
+       
+        return Math.PI * Math.pow(2,this.radio);
         
     }
 
-    
-
-
-
-    
 }
 
-
 const figuras = new Figuras(8,5,2.5);
-figuras.rectangulo();
-figuras.cuadrado();
-figuras.circulo();
-
+console.log("El area de un rectangulo es: " + figuras.rectangulo());
+console.log("el area del cuadrado es: " + figuras.cuadrado());
+console.log("El area del circulo es: "+ figuras.circulo());
 
 //rectangulo,cuadrado y circulo
 
